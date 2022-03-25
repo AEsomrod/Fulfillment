@@ -62,6 +62,23 @@ router.get("/admin_dashboard", (req, res) => {
   }
 })
 
+router.get("/user_dashboard", (req, res) => {
+  const showname  = req.session.username
+  /*let order = 1
+  User.find().exec((err,doc)=>{
+    res.render("user", { users: doc, order: order})
+  })*/
+  if(req.session.login && req.session.typeUser === 'User'){
+    let order = 1
+    User.find().exec((err,doc)=>{
+      res.render("user_dashboard", { users: doc, order: order, showname: showname})
+    })
+  }
+  else {
+    res.redirect('/')
+  }
+})
+
 router.get("/user", (req, res) => {
   const showname  = req.session.username
   /*let order = 1
@@ -78,7 +95,31 @@ router.get("/user", (req, res) => {
     res.redirect('/')
   }
 })
+router.get("/orderby_user", (req, res) => {
+  const showname  = req.session.username
+  if(req.session.login && req.session.typeUser === 'Admin'){
+    let order = 1
+    User.find({ createdBy: showname }).exec((err,doc)=>{
+      res.render("orderby_user", { User: doc, order: order, showname: showname})
+    })
+  }
+  else {
+    res.redirect('/')
+  }
+})
 
+router.get("/orderby_user_pageuser", (req, res) => {
+  const showname  = req.session.username
+  if(req.session.login && req.session.typeUser === 'User'){
+    let order = 1
+    User.find({ createdBy: showname }).exec((err,doc)=>{
+      res.render("orderby_user_pageuser", { User: doc, order: order, showname: showname})
+    })
+  }
+  else {
+    res.redirect('/')
+  }
+})
 
 router.get("/stock", (req, res) => {
   const showname = req.session.username

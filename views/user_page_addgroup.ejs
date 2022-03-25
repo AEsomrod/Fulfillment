@@ -26,7 +26,7 @@
 <body>
     <%- include('navbar') %>
         <div class="d-flex">
-            <%- include('left_bar') %>
+            <%- include('left_bar_user') %>
                 <div style="width: 100%; background-color: rgb(245, 245, 245); margin-left: 2px; padding: 50px;">
 
 
@@ -52,23 +52,28 @@
                             <h4>สินค้า</h4>
                             <table id="customers">
                                 <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th>#</th>
-                                    <th >รหัสสินค้า</th>
-                                    <th >ชื่อสินค้า</th>
-                                    <th >จำนวน</th>
+                                 
+                                 
+                                 
+                                   
+                                   
+                                
                                     
         
                                 </tr>
                             </table>
-<table id="myTable">
-     
+<table id="myTable" class="table2">
+    
+    <th width="100">#</th>
+    <th >รหัสสินค้า</th>
+    <th >ชื่อสินค้า</th>
+    <th >จำนวน</th>
+    <th></th>
+   
 </table>
 <br>
 <button class="btn btn-primary " onclick="add_row()">+เพิ่มสินค้า</button>
-<button class="btn btn-danger "  onclick="del_row()">-ลบสินค้า</button>
+
 <div class="box3">รวมทั้งหมด(ชิ้น)</div>
 <button style="float: right; margin-top: 20px; width: 100px;" type="button" class="btn btn-primary">บันทึก</button>
 </div>
@@ -87,11 +92,15 @@ function add_row() {
     var cell4 = row.insertCell(3);
     var cell5 = row.insertCell(4);
 
-    cell1.innerHTML = "<button' class='btn btn-outline-primary butadd'  name='txtA'"+count_rows+" value>เลือก";
-    cell2.innerHTML = "<td   type='text' name='txtB'"+count_rows+" value>1";
-    cell3.innerHTML = "<input  class='form-control put1' type='text' name='txtC'"+count_rows+" value>";
-    cell4.innerHTML = "<input  class='form-control put1' type='text' name='txtC'"+count_rows+" value>";
-    cell5.innerHTML = "<input  class='form-control put1' type='text' name='txtC'"+count_rows+" value>";
+
+    
+    cell1.innerHTML = "<label class=''>1";
+    cell2.innerHTML = "<input  class='form-control ' type='text' name='txtC'"+count_rows+" value>";
+    cell3.innerHTML = "  <input class='form-control ' list='datalistOptions'  ><datalist id='datalistOptions'> <option>โค้ก</option><option> น้ำเปล่า</option><option >มาม่า</option> </input> ";
+                                
+                           
+    cell4.innerHTML = "<input  class='form-control ' type='text' name='txtC'"+count_rows+" value>";
+    cell5.innerHTML = "<button class='btn btn-danger ''  onclick='del_row()''>-ลบสินค้า</button>";
 }
 
 

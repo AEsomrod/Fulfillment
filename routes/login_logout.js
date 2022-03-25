@@ -24,7 +24,7 @@ router.post('/login',(req,res)=>{
                 //res.cookie("login", true)
                 req.session.login = true
                 //req.session.cookie.maxAge = 30000
-                res.redirect("/user_page_group")
+                res.redirect("/user_dashboard")
             }
             else if (username === doc.username && password === doc.password && doc.typeUser === 'Admin') {
                 req.session.username = username
