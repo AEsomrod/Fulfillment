@@ -27,6 +27,10 @@
             <%- include('left_bar') %>
                 <div style="width: 100%; background-color: rgb(245, 245, 245); margin-left: 2px; padding: 50px;">
                     <div class="container">
+                        <p class="t1 ">
+                            <% Object %>
+                        </p>
+
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="card card1">
@@ -37,7 +41,7 @@
                                                     <p class="card-title1">สินค้าเข้า</p>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <p class="t1 ">1234</p>
+                                                    <p class="t1 "><%= countOrderNew %></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -56,7 +60,7 @@
                                                     <p class="card-title1">สินค้าออก</p>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <p class="t1 ">777</p>
+                                                    <p class="t1 "><%= countOrder %></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -70,11 +74,11 @@
                                     <div class="card-body">
                                         <div class="container">
                                             <div class="row">
-                                                <div class="col-lg-6">
-                                                    <p class="card-title1">สินค้าออก</p>
+                                                <div class="col-lg-8">
+                                                    <p class="card-title1">สินค้าทั้งหมด</p>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <p class="t1 ">777</p>
+                                                <div class="col-lg-4">
+                                                    <p class="t1 "><%= countStock %></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,15 +86,22 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
+
+
+
+
                             <div class="col-lg-4">
                                 <div class="card card1">
                                     <div class="card-body">
                                         <h5 class="card-title c1">--</h5>
-
-
                                     </div>
                                 </div>
                             </div>
+
+
                             <div class="col-lg-4">
                                 <div class="card card1">
                                     <div class="card-body">

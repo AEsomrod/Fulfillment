@@ -24,46 +24,46 @@
 <body>
     <%- include('navbar') %>
         <div class="d-flex">
-            <nav class="nav flex-column"
+            <!-- <nav class="nav flex-column"
                 style="background-color: white; width: 350px; height: 900px; padding: 25px 0 0 30px;">
-                <!--<a class="nav-link" href="/dashboard" style="color: #333333;">Dashboard</a>-->
+               
                 <a class="nav-link" href="/user" style="color: #1a75ff;"><b>User</b></a>
                 <a class="nav-link" href="/group" style="color: #333333;">Group</a>
                 <a class="nav-link" href="/stock" style="color: #333333;">Stock</a>
-            </nav>
-            <div style="width: 100%; background-color: rgb(245, 245, 245); margin-left: 2px; padding: 50px;">
+            </nav> -->
+            <div style="width: 100%; background-color: rgb(245, 245, 245); margin-left: 2px; padding: 50px;text-align: center;">
                 <h2>Add User</h2>
                 <br>
-                <form action="/insert" method="post" style="padding: 20px 100px 0 100px;">
+                <form action="/insert" method="post" style="padding: 20px 100px 0 100px;display: inline-block;text-align: center;">
                     <div class="mb-3 input-add-u">
-                        <label class="form-label">Type User</label>
+                        <label class="form-label" style="text-align: start;display: block;">Type User</label>
                         <select class="form-select" name="typeUser" aria-label="Default select example">
                             <option value="Admin" selected>Admin</option>
                             <option value="User">User</option>
                         </select>
                     </div>
                     <div class="mb-3 input-add-u">
-                        <label for="" class="form-label">ชื่อผู้ใช้</label>
+                        <label for="" class="form-label" style="text-align: start;display: block;">ชื่อผู้ใช้</label>
                         <input type="text" class="form-control" name="username" placeholder="namecom">
                     </div>
                     <div class="mb-3 input-add-u">
-                        <label for="" class="form-label">รหัสผ่าน</label>
+                        <label for="" class="form-label" style="text-align: start;display: block;">รหัสผ่าน</label>
                         <input type="password" class="form-control" id="" name="password" placeholder="*** *** ***">
                     </div>
                     <div class="mb-3 input-add-u">
-                        <label for="" class="form-label">อีเมล</label>
+                        <label for="" class="form-label" style="text-align: start;display: block;">อีเมล</label>
                         <input type="email" class="form-control" id="" name="email" placeholder="name@example.com">
                     </div>
                     <div class="mb-3 input-add-u">
-                        <label for="" class="form-label">เบอร์โทร</label>
+                        <label for="" class="form-label" style="text-align: start;display: block;">เบอร์โทร</label>
                         <input type="tel" class="form-control" id="" name="phoneNumber" placeholder="08*********" pattern="[0-9]{10}">
                     </div>
                     <div class="mb-3 input-add-u">
-                        <label for="" class="form-label">บริษัท</label>
+                        <label for="" class="form-label" style="text-align: start;display: block;">บริษัท</label>
                         <input type="text" class="form-control" id="" name="companyName" placeholder="">
                     </div>
                     <div class="mb-3 input-add-u">
-                        <label for="" class="form-label">ที่อยู่</label>
+                        <label for="" class="form-label" style="text-align: start;display: block;">ที่อยู่</label>
                         <textarea class="form-control" id="" name="address" rows="3"></textarea>
                     </div>
                     <button class="btn btn-primary">บันทึก</button>
