@@ -494,6 +494,21 @@ router.get("/user_page_addgroup", (req, res) => {
     res.redirect("/");
   }
 });
+router.get("/user_page_edit_addgroup", (req, res) => {
+  const showname = req.session.username;
+  if (req.session.login && req.session.typeUser === "User") {
+    let order = 1;
+    Group.find({ createdBy: showname }).exec((err, doc) => {
+      res.render("user_page_edit_addgroup", {
+        groups: doc,
+        order: order,
+        showname: showname,
+      });
+    });
+  } else {
+    res.redirect("/");
+  }
+});
 
 router.get("/user_page_stock", (req, res) => {
   const showname = req.session.username;

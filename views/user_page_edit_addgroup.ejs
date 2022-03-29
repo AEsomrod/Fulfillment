@@ -32,7 +32,7 @@
 
                     <nav class="navbar">
                         <div class="container-fluid">
-                            <h1 style="margin-top: auto; margin-bottom: auto;">เพิ่มกลุ่มสินค้า</h1>
+                            <h1 style="margin-top: auto; margin-bottom: auto;">แก้ไขกลุ่มสินค้า</h1>
                            
                         </div>
                     </nav>
@@ -40,7 +40,7 @@
                         <div class="card-body">
                             <div class="mb-3 input-add-u">
                                 <label for="" class="form-label">ชื่อกลุ่มสินค้า</label>
-                                <input type="text" class="form-control" id="" name="groupname" placeholder="">
+                                <input type="text" class="form-control" id="" name="groupname" placeholder="โปร1">
                             </div>
                          
                         </form>
@@ -50,26 +50,36 @@
                       <div class="card">
                         <div class="card-body">
                             <h4>สินค้า</h4>
-                            <table id="customers">
-                                <tr>
-                                 
-                                 
-                                 
-                                   
-                                   
-                                
-                                    
-        
-                                </tr>
-                            </table>
+                           
 <table id="myTable" class="table2">
-    
+    <tr>
     <th width="100">#</th>
     <th >รหัสสินค้า</th>
     <th >ชื่อสินค้า</th>
     <th >จำนวน</th>
     <th></th>
-   
+</tr>
+<tr>
+    <td>1</td>
+    <td><input class="form-control" list="datalistOptions" placeholder="0001"></td>
+    <td><input class="form-control" list="datalistOptions" placeholder="โค้ก"></td>
+    <td><input class="form-control" list="datalistOptions" placeholder="100"></td>
+    <td><button class='btn btn-danger ''  onclick='del_row()''>-ลบสินค้า</button></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td><input class="form-control" list="datalistOptions" placeholder="0002"></td>
+    <td><input class="form-control" list="datalistOptions" placeholder="น้ำเปล่า"></td>
+    <td><input class="form-control" list="datalistOptions" placeholder="500"></td>
+    <td><button class='btn btn-danger ''  onclick='del_row()''>-ลบสินค้า</button></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td><input class="form-control" list="datalistOptions" placeholder="0003"></td>
+    <td><input class="form-control" list="datalistOptions" placeholder="มาม่า"></td>
+    <td><input class="form-control" list="datalistOptions" placeholder="300"></td>
+    <td><button class='btn btn-danger ''  onclick='del_row()''>-ลบสินค้า</button></td>
+</tr>
 </table>
 <br>
 <button class="btn btn-primary " onclick="add_row()">+เพิ่มสินค้า</button>
@@ -97,11 +107,11 @@ function add_row() {
 
     
     cell1.innerHTML = "<label class=''>1";
-    cell2.innerHTML = "<input  class='form-control ' type='text' name='txtC'"+count_rows+" value>";
+    cell2.innerHTML = "<input  class='form-control ' type='text' name='txtC' value>";
     cell3.innerHTML = "  <input class='form-control ' list='datalistOptions'  ><datalist id='datalistOptions'> <option>โค้ก</option><option> น้ำเปล่า</option><option >มาม่า</option> </input> ";
                                 
                            
-    cell4.innerHTML = "<input  class='form-control ' type='text' name='txtC'"+count_rows+" value>";
+    cell4.innerHTML = "<input  class='form-control ' type='text' name='txtC' value>";
     cell5.innerHTML = "<button class='btn btn-danger ''  onclick='del_row()''>-ลบสินค้า</button>";
 }
 
