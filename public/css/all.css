@@ -4,6 +4,12 @@ body{
     width: 100%;
     
 }
+/* .nav1{
+  z-index: 1;
+}
+.nav2{
+  z-index: 0;
+} */
 .center-1 {
     display: block;
     margin: auto;
@@ -82,7 +88,7 @@ td {
   }
   .card-title1{
     margin-top: 15px;
-    font-size: 30px;
+    font-size: 27px;
      text-align: center;
      font-weight: bold;
     
@@ -212,4 +218,19 @@ text-align: right;
   text-align: left;
   background-color: #a8b4b0;
   color: white;
+}
+
+form i {
+  margin-left: -40px;
+  cursor: pointer;
+  font-size: 20px;
+}
+input[type=password],[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+ 
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
